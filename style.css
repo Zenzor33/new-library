@@ -1,0 +1,72 @@
+body {
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: repeat(2, min-content) 1fr;
+  justify-items: center;
+}
+
+.main {
+  padding: 10px;
+  padding-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 80%;
+  gap: 25px;
+}
+
+.card {
+  min-width: 200px;
+  max-width: 600px;
+  background-color: lightblue;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(4, auto);
+  justify-items: center;
+  min-height: 300px;
+}
+
+.card-icons {
+  display: flex;
+  justify-self: flex-end;
+  justify-items: flex-end;
+  gap: 10px;
+}
+
+.card-footer {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 25px;
+}
+
+.form-popup {
+  /* display: none; */
+  position: absolute;
+  /* below code centers modal & scale(0) makes it disappear*/
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* above code centers modal & scale(0) makes it disappear */
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  /* z-index puts modal above all other elements */
+  z-index: 10;
+  width: min-content;
+  max-width: 80%;
+  background-color: white;
+  padding: 10px 15px;
+  /* opacity: 50%; */
+}
+
+.form-popup.hidden {
+  display: none;
+}
